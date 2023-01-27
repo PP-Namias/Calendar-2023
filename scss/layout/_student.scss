@@ -1,0 +1,185 @@
+@use '../util' as u;
+
+.module{
+    &__wrapper{
+        display: flex;
+        &__seal{
+            background: u.$secondary-color;
+            min-width: 610px;
+            height: 100vh;
+            position: relative;
+            clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%); 
+            &::before{
+                content: '';
+                position: absolute;
+                background: #fff;
+                width: 595px;
+                height: 100%;
+                clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);      
+            }
+            &__fixed{
+                position: fixed;
+                width: 580px;
+                height: 100%;
+                background: url(../images/EARIST.png) center no-repeat;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);      
+            }
+        }
+        &__form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            &__header{
+                    position: relative;
+                    height: 110px;
+                    width: 100%;
+                    background: u.$secondary-color;
+                    clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+                    display: none;
+                    &::before{
+                        content:'';
+                        position: absolute;
+                        height: 100px;
+                        width: 100%;
+                        background: #fff;
+                        clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+                    }
+                &__border{
+                    text-align: center;
+                    height: 90px;
+                    width: 100%;
+                    background: url(../images/EARIST2.png) center no-repeat;
+                    background-size: cover;
+                    clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+                    padding: 5px 0;
+                    img{
+                        width: 75px;
+                    }
+                }
+            }
+            &__content{
+                width: min(100%, 450px);
+                padding-inline:15px;
+                &__title{
+                    font-size: 1.5rem;
+                    width: min(100%, 290px);
+                    padding-left:10px;
+                    position: relative;
+                    line-height: 1.1;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 5px;
+                        height: 100%;
+                        background: u.$secondary-color;
+                        left: 0;
+                    }
+                }
+                &__login{
+                    &__field-select{
+                        display: flex;
+                        flex-direction: column;
+                        margin: 10px 0 20px;
+                        label{
+                            font-size: .8rem;
+                        }
+                        select{
+                            padding: 12.5px 15px;
+                            background: #f2f3f4;
+                            border: 2px solid #f2f3f4;
+                            transition: .3s ease;
+                            &:focus{
+                                border: 2px solid u.$primary-color;
+                            }
+                        }
+                    }
+                    &__field-input{
+                        position: relative;
+                        &.active label{
+                            font-size: .8rem;
+                            top: 5px;
+                        }
+                        &.js-username{
+                            margin: 20px 0 10px;
+                        }
+                        input{
+                            background: #f2f3f4;
+                            width: 100%;
+                            padding: 20px 15px 5px;
+                            border: 2px solid #f2f3f4;
+                            transition: .3s ease;
+                            &:focus{
+                                border: 2px solid u.$primary-color;
+                            }
+                            &:focus ~ label{
+                                color: u.$primary-color;
+                            }
+                            
+                        }
+                        label{
+                            position: absolute;
+                            left: 15px;
+                            top: 13px;
+                            color: #808080;
+                            transition: .3s ease;
+                        }
+                    }
+                    &__forgot-pass{
+                        text-align: right;
+                    }
+                    &__field-btn{
+                        button{
+                            width: 100%;
+                            background: u.$primary-color;
+                            padding: 12.5px 15px;
+                            color: #fff;
+                            font-weight: 500;
+                            margin: 10px 0 20px;
+                            cursor: pointer;
+                        }
+                    }
+                    &__copyright{
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1024px){
+        &__wrapper{
+            &__seal{
+                min-width: 510px;
+                &::before{
+                    width: 495px;
+                }
+                &__fixed{
+                    width: 480px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:920px){
+        &__wrapper{
+            &__seal{
+                display: none;
+            }
+
+            &__form{
+                justify-content: flex-start;
+                gap: 2rem;
+                &__header{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+

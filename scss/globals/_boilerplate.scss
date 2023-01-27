@@ -1,0 +1,31 @@
+@use '../util' as u;
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input, button, select, option{
+    font: inherit;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+a{
+    color: u.$primary-color;
+    text-decoration: none;
+}
+
+p, a{
+    font-size: .9rem;
+}
+
+.separator{
+    border-top: 1px solid #808080;
+}
+
+span{
+    color: u.$primary-color ;
+}

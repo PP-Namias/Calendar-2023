@@ -1,0 +1,248 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input, button, select, option {
+  font: inherit;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+a {
+  color: #ff5e00;
+  text-decoration: none;
+}
+
+p, a {
+  font-size: 0.9rem;
+}
+
+.separator {
+  border-top: 1px solid #808080;
+}
+
+span {
+  color: #ff5e00;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+.module__wrapper {
+  display: flex;
+}
+.module__wrapper__seal {
+  background: #FFA500;
+  min-width: 610px;
+  height: 100vh;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+}
+.module__wrapper__seal::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 595px;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+}
+.module__wrapper__seal__fixed {
+  position: fixed;
+  width: 580px;
+  height: 100%;
+  background: url(../images/ucc-south-2.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+}
+.module__wrapper__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.module__wrapper__form__header {
+  position: relative;
+  height: 110px;
+  width: 100%;
+  background: #FFA500;
+  -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+          clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+  display: none;
+}
+.module__wrapper__form__header::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  background: #fff;
+  -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+          clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+}
+.module__wrapper__form__header__border {
+  text-align: center;
+  height: 90px;
+  width: 100%;
+  background: url(../images/ucc-south-2.jpg) center no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+          clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+  padding: 5px 0;
+}
+.module__wrapper__form__header__border img {
+  width: 75px;
+}
+.module__wrapper__form__content {
+  width: min(100%, 550px);
+  padding-inline: 15px;
+}
+.module__wrapper__form__content__title {
+  font-size: 1.5rem;
+  width: min(100%, 290px);
+  padding-left: 10px;
+  position: relative;
+  line-height: 1.1;
+}
+.module__wrapper__form__content__title::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #FFA500;
+  left: 0;
+}
+.module__wrapper__form__content__p {
+  text-align: center;
+  margin-top: 100px;
+
+
+}
+
+
+
+
+
+
+
+
+#calendar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  font-family: "Lato", sans-serif;
+}
+#calendar_weekdays div {
+  display: inline-block;
+  vertical-align: top;
+}
+#calendar_content,
+#calendar_weekdays,
+#calendar_header {
+  position: relative;
+  width: 320px;
+  overflow: hidden;
+  float: left;
+  z-index: 10;
+}
+
+#calendar_weekdays div,
+#calendar_content div {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: #787878;
+}
+#calendar_content {
+  -webkit-border-radius: 0px 0px 12px 12px;
+  -moz-border-radius: 0px 0px 12px 12px;
+  border-radius: 0px 0px 12px 12px;
+}
+#calendar_content div {
+  float: left;
+}
+#calendar_content div:hover {
+  background-color: #F8F8F8;
+}
+#calendar_content div.blank {
+  background-color: #E8E8E8;
+}
+#calendar_header,
+#calendar_content div.today {
+  zoom: 1;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+#calendar_content div.today {
+  color: #FFFFFF;
+}
+#calendar_header {
+  width: 100%;
+  height: 37px;
+  text-align: center;
+  background-color: #FF6860;
+  padding: 18px 0;
+  -webkit-border-radius: 12px 12px 0px 0px;
+  -moz-border-radius: 12px 12px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
+}
+#calendar_header h1 {
+  font-size: 1.5em;
+  color: #FFFFFF;
+  float: left;
+  width: 70%;
+}
+i[class^="icon-chevron"] {
+  color: #FFFFFF;
+  float: left;
+  width: 15%;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .module__wrapper__seal {
+    min-width: 510px;
+  }
+  .module__wrapper__seal::before {
+    width: 495px;
+  }
+  .module__wrapper__seal__fixed {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .module__wrapper__seal {
+    display: none;
+  }
+  .module__wrapper__form {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+  .module__wrapper__form__header {
+    display: block;
+  }
+}
+
+
+
+
+
