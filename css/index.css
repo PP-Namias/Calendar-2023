@@ -3,37 +3,30 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 input, button, select, option {
   font: inherit;
   border-radius: 5px;
   border: none;
   outline: none;
 }
-
 a {
   color: #ff5e00;
   text-decoration: none;
 }
-
 p, a {
   font-size: 0.9rem;
 }
-
 .separator {
   border-top: 1px solid #808080;
 }
-
 span {
   color: #ff5e00;
 }
-
 body {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-size: 100%;
 }
-
 .module__wrapper {
   display: flex;
 }
@@ -126,17 +119,7 @@ body {
 .module__wrapper__form__content__p {
   text-align: center;
   margin-top: 100px;
-
-
 }
-
-
-
-
-
-
-
-
 #calendar {
   margin-left: auto;
   margin-right: auto;
@@ -211,13 +194,6 @@ i[class^="icon-chevron"] {
   width: 15%;
   border-radius: 50%;
 }
-
-
-
-
-
-
-
 @media screen and (max-width: 1024px) {
   .module__wrapper__seal {
     min-width: 510px;
@@ -241,8 +217,3 @@ i[class^="icon-chevron"] {
     display: block;
   }
 }
-
-
-
-
-
